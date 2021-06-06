@@ -1,17 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { useDataTable, DataTable } from './hooks/useDataTable'
+import { useDatastore } from './hooks/useDatastore'
+import { useDashboard, Dashboard } from './hooks/useDashboard'
+import {useForm} from './hooks/useForm';
+import {useDetails, Details} from './hooks/useDetails'
+import {CreateItemButton} from './components/CreateItemButton';
+import {DeleteAllItemsButton} from "./components/DeleteAllItemsButton";
+import {DeleteItemButton} from "./components/DeleteItemButton";
+import {DetailsField} from "./components/DetailsField";
+import {deleteAllItems} from "./functions/deleteAllItems";
+import {deleteItem} from "./functions/deleteItem";
+import {generateFakeData} from "./functions/generateFakeData";
+import {generateId} from "./functions/generateId";
+import {isNullOrUndefined} from "./functions/isNullOrUndefined";
+import {saveItem} from "./functions/saveItem";
+import {useAmplifyConnector} from "./hooks/useAmplifyConnector";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const ExampleComponent = (props) => {
+  return (<div>Hello World!</div>)
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+export {
+  ExampleComponent,
+  DataTable,
+  useDataTable,
+  useDatastore,
+  useDashboard,
+  useForm,
+  useDetails,
+  Details,
+  Dashboard,
+  CreateItemButton,
+  DeleteAllItemsButton,
+  DeleteItemButton,
+  DetailsField,
+  deleteAllItems,
+  deleteItem,
+  generateFakeData,
+  generateId,
+  isNullOrUndefined,
+  saveItem,
+  useAmplifyConnector
+}

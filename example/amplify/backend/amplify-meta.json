@@ -1,0 +1,40 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyui-dev-204038-authRole",
+      "UnauthRoleArn": "arn:aws:iam::615420348778:role/amplify-amplifyui-dev-204038-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::615420348778:role/amplify-amplifyui-dev-204038-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-amplifyui-dev-204038-deployment",
+      "UnauthRoleName": "amplify-amplifyui-dev-204038-unauthRole",
+      "StackName": "amplify-amplifyui-dev-204038",
+      "StackId": "arn:aws:cloudformation:us-west-2:615420348778:stack/amplify-amplifyui-dev-204038/77d6f450-c8d4-11eb-ae4b-0238bddd7185",
+      "AmplifyAppId": "d3v39tiqzki4jl"
+    }
+  },
+  "api": {
+    "amplifyui": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 365,
+              "description": "feature-showcase"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd",
+      "lastPushTimeStamp": "2021-06-09T03:52:22.196Z"
+    }
+  }
+}
